@@ -4,7 +4,7 @@ class Transaction < ApplicationRecord
 
 
 
-  
+
   validates :amount, presence: true, format: { with: /\A[-+]?\d+(?:\.\d{0,2})?\z/ }, numericality: { other_than: 0 }
   validates :description, length: { in: 2..255 }
 end
