@@ -5,10 +5,6 @@ class Wallet < ApplicationRecord
 
   validates :name, presence: true, length: { in: 1..30 }
 
-  def transactions
-    credits.or(debits)
-  end
-
   def balance
     Transactions::GetBalance.for_wallet(self)
   end

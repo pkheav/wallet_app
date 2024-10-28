@@ -8,7 +8,8 @@ module HasWallets
   end
 
   def transactions
-    credits.or(debits)
+    # TODO: this isn't ideal but working for the meantime
+    Transaction.where(id: credits).or(Transaction.where(id: debits))
   end
 
   def balance

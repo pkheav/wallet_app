@@ -1,1 +1,23 @@
-<h1></h1>
+<h1>Wallet Summary</h1>
+
+<div>
+    Welcome <%= current_user.email %>,
+</div>
+
+<br>
+
+<div>
+    Current balance is <%= current_user.balance %>.
+</div>
+
+<br>
+
+<div>
+    Transactions:
+</div>
+
+<% @transactions.each do |txn| %>
+    <div>
+        <%= txn %>
+    </div>
+<% end %>

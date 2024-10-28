@@ -1,5 +1,5 @@
 class TransactionsController < ApplicationController
   def index
-    @transactions = Transaction.all
+    @transactions = current_user.transactions.order(created_at: :desc).last(10).pluck(:type, :description, :amount)
   end
 end
