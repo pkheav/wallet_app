@@ -48,4 +48,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_26_021309) do
     t.datetime "updated_at", null: false
     t.index ["owner_type", "owner_id"], name: "index_wallets_on_owner"
   end
+
 end
