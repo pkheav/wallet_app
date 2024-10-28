@@ -1,0 +1,7 @@
+<nav class="navbar mb-2">
+  <div class="container-fluid">
+    <% if logged_in? %>
+        <%= link_to "Log out", logout_path, method: :delete %>
+    <% end %>
+  </div>
+</nav>
